@@ -14,25 +14,21 @@ const Index = () => {
       <div className="lg:ml-52">
         <DashboardHeader />
         <main className="p-6 space-y-6">
-          {/* Summary Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {/* Summary Cards + Coleta */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <EventosCard />
             <DiscosCard />
             <VMsToolsCard />
+            <ColetaDadosCard />
           </div>
 
-          {/* Coleta + Alterações por Usuário */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
-            <div className="lg:col-span-3">
-              <ColetaDadosCard />
-            </div>
+          {/* Table (2/3) + Alterações por Usuário (1/3) */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             <div className="lg:col-span-2">
-              <AlteracoesPorUsuarioCard />
+              <VMsAlteracoesTable />
             </div>
+            <AlteracoesPorUsuarioCard />
           </div>
-
-          {/* Table */}
-          <VMsAlteracoesTable />
         </main>
       </div>
     </div>
